@@ -1,0 +1,109 @@
+	1 shebang
+
+#!/bin/bash
+
+	2 voldoende commentaar bovenaan en in script
+
+# Functie: Zoekt naar grote bestanden
+# In een bepaalde directory
+# Arguments: Arg1 is een directory
+# Auteur: jan.celis@kdg.be
+# Copyright: 2014 GNU v3 jan.celis@kdg.be
+# Versie: 0.1
+# Requires: Standaard shell find commando
+#============================================================
+#          FILE:  backuptar.sh
+#         USAGE:  ./backuptar.sh
+#   DESCRIPTION: 
+#
+#       OPTIONS:  optional $1 directory
+#  REQUIREMENTS:  tar
+#        AUTHOR:  Jan Celis (jan.celis@kdg.be)
+#       COMPANY:  KdG
+#       VERSION:  1.1
+#       CREATED:  11/02/14 13:42:38 CET
+#      REVISION:  ---
+#============================================================
+
+	3 eigen variabelen in kleine letters, omgevingsvar in hoofdletters
+	  varn bovenaan declareren: alle tekstberichten in een var onderbrengen
+
+	4 Foutenafhandeling: echo eigen foutboodschap met progr en funktienaam, naar stderr sturen, exit 1 tot 200
+
+if ! [ -f $input_bestand ]; then
+echo "Fout in $0: $input_bestand bestaat niet" >&2
+exit 1
+fi
+	standaardfoutboodschap laten verdwijnen (voordat je eigen boodschap ernaar toe stuurt:
+
+2>/dev/null 	
+
+	eigen foutboodschap naar log file: 2 >>${logfile}   bv in var/log/...   >> wil zeggen append aan file (die je eerst als var aanmaakt)
+
+	juiste exit code geven: ook exit 0 instellen
+
+mkdir “$directory”
+if [ $? != 0 ] ; then
+echo "$directory aanmaken niet gelukt"
+>&2
+exit 1
+else
+echo "$directory aanmaken gelukt"
+exit 0
+fi
+	foutboodschap van verschillende lijnen in 1 var steken: message="a\nb"  en dan echo -e $message
+
+	5 controle van argumenten en voorzien helptekst als eerste arg --help
+
+if [ $# -lt 1 -o "$1" = "--help" ] ; then
+echo "Usage: `basename $0` arg1   Example: `basename $0` Hallo " >&2 
+exit 1
+fi
+
+	defaultwaarde instellen als geen arg opgegeven
+
+url="127.0.0.1/"
+if ! [ $# -lt 1 ] 
+then url="$1"
+fi
+
+	6 controle ingelogd als root user voor je sudo commando gebruikt
+
+if [ "$(id -u)" != "0" ]; then
+echo "Dit script moet je als root uitvoeren"
+1>&2
+exit 1
+fi
+
+	7 validatie input
+
+if [ "$getal" -eq "$getal" ] 2>/dev/null;  !Geeft normaal integer expression expected
+then echo $getal is een getal
+else  echo $getal is geen getal
+fi
+
+if [ -s "$bestandsnaam" ]; werkt niet bij binary files?
+of find $bestandsnaam -size +0M   if [ $? -eq 0 ] &&  [ -f  $bestandsnaam ] 
+of if ! [ -r /bin/df -a -x /bin/df ]
+then cat $bestandsnaam
+else echo $bestandsnaam werd niet gevonden
+fi
+
+	8 Dependencies
+
+	nakijken of bestand (commando) bestaat:
+
+command -v ab >/dev/null || (echo $error_geen_ab >&2 && exit 1) && (rest uit te voeren)
+!command geeft normaal gezien path weer
+
+	nakijken of een programma fouten gaf: 
+
+curl -ss $url &>/dev/null && ab -n 100 -kc 10 $url || (echo $error_urlnietok >&2 && exit 2) )
+
+	of
+
+curl -o /dev/null --silent --head --connect-timeout 1 ${url}
+if [ $? -ne 0 ]; then
+echo ${error_url} && exit 1
+else...
+fi
