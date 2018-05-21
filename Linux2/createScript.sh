@@ -6,7 +6,7 @@ if [[ -n $1 ]]; then
   echo  '#!/bin/bash' > "$1.sh"
   echo  '#Author: msnm' >> "$1.sh"
   echo  "#Createdon: $(date)" >> "$1.sh"
-  echo  "#Purpose of $(basename $0):" >> "$1.sh"
+  echo  "#Purpose of $1:" >> "$1.sh"
   chmod +x "$1.sh"
   echo "Script is created"
 fi
