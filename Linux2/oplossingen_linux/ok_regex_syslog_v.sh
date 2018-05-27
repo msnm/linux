@@ -25,3 +25,5 @@ cat "$tmpfile" | sort | uniq -c | sort -g | grep -v info
 #rm -f "$tmpfile" 2>/dev/null
 # ook kernel match
 #regex="$a$a$a $d$d $d$d:$d$d:$d$d $a+ (.*)(\[$d+\]){0,1}: (.*)"
+
+

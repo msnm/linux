@@ -19,3 +19,5 @@ for proces in `ps -eo pid,args`
 do
   tooninkleur $proces 
 done
+
+

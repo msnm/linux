@@ -15,3 +15,5 @@ for file in $confs; do
   #grep -n  Prefix each line of output with the 1-based line number within its input file.
   echo -e "\n$(grep -iH $keyword $file)\n"
 done
+
+

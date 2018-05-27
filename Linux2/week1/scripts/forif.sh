@@ -11,3 +11,5 @@ for line in $(cat $path); do
     echo $(echo $line | cut -d : -f5)
   fi
 done
+
+

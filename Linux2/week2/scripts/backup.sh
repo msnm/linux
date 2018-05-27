@@ -30,3 +30,5 @@ fi
 
 #We need to append files to the tar file us the -r option!
 find $dir -iname "*.sh" -mtime -24 -exec  tar -rvf $filename {} \;  >>"${backuplog}" 2>>"${errorlog}"
+
+

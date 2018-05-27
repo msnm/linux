@@ -12,3 +12,5 @@ do
       grep -aH sbin $cmd
   fi
 done
+
+

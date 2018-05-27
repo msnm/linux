@@ -12,3 +12,5 @@ duur=$(($after-$before))
 echo "$(($duur/1000000000)) seconden"
 echo "$((($duur%1000000000)/1000000)) miliseconden"
 echo "$(($duur%1000000)) nanoseconden"
+
+

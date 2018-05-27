@@ -1,0 +1,247 @@
+#===================maakthumbail.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Mi Mai 23 18:44:55 CEST 2018
+#Purpose of maakthumbail:
+
+function convertTopng() {
+  convert -thumbnail 50x50 -extent 50x50 -gravity center ${1} ${2}
+}
+
+IFS=$'\n'
+
+for image in $(find -maxdepth 4 -iname "*.jpg"); do
+  newnamenowhitespace=${image//' '/"_"} #whitespace vervangen door
+  jpgTopng=${newnamenowhitespace/%jpg/png}
+  convertTopng ${image} ${jpgTopng}
+if [[ $? -eq 0 ]]; then
+  echo "Bestand is omgezet van $image to $jpgTopng"
+fi
+done
+
+unset IFS
+
+
+
+
+#===================maakwatermerk.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Mi Mai 23 20:31:54 CEST 2018
+#Purpose of maakwatermerk: jpg bestanden een watermerk geven
+
+linkToLogo=${1:-"https://www.kdg.be/doc/huisstijl/Logo_V.png"}
+errorDownload="Could not download the file from ${linkToLogo}"
+errorCompose="Could not compose logo on file"
+watermark="Logo_V.png"
+#Function to download from a given link!
+function downloadLogo() {
+  echo $FUNCNAME
+  wget ${1} >/dev/null  2>&1
+#  watermark=$(wget -qO- $1 >/dev/null  2>&1)
+  if [[ ${?} -ne 0 ]]; then
+    echo ${errorDownload} >&2
+    exit 1
+  else
+    echo "Download from ${linkToLogo} was succesfull!"
+  fi
+}
+
+#Function to compose logo and file
+function makeWatermark() {
+  composite -compose bumpmap -tile ${watermark} ${1} ${2}
+  if [[ ${?} -ne 0 ]]; then
+    echo "${errorCompose} ${1}" >&2
+    return 1
+  else
+    echo "Compose succesfull for ${1}"
+  fi
+}
+
+#Function to eliminate white space and replace it with "_"
+function noWhiteSpace() {
+  echo ${1/' '//"_"}
+}
+
+#Function to change the contrast of the logo
+function changeContrast() {
+  convert -brightness-contrast 50x20 $1
+}
+
+# ------------- Main program ------------------------------------------------
+# 1. Set the IFS to newline
+IFS=$'\n'
+# 2. Download the logo for the watermark
+if ! [[ -f ${watermark} ]]; then
+  downloadLogo ${linkToLogo}
+else
+  echo "${watermark} is already downloaded in the current dir"
+fi
+
+# 3. Retrieve a jpg files
+files=$(find -iname "*.jpg")
+# 4. Change the contrast of the logo
+changeContrast $watermark
+# 5. Put watermark on each file
+echo ${files}
+for file in ${files}; do
+  nowhitespaceName=$(noWhiteSpace ${file})
+  newFile=${nowhitespaceName/%jpg/watermark.jpg}
+  makeWatermark ${watermark} ${file} ${newFile}
+  if [[ ${?} -eq 0 ]]; then
+    echo "New file with watermak is created with name ${newFile}"
+  fi
+done
+
+unset IFS
+
+
+#===================poorten.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: So Mai 27 19:10:54 CEST 2018
+#Version: 1.0
+#Purpose of poorten:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+#=========================================================
+
+echo "TCP poorten:"
+IFS=$'\n'
+for line in $(netstat -tulpn 2>/dev/null); do
+  var=$(echo $line | grep LISTEN ) 2>/dev/null
+  if [[ $? -eq 0 ]]; then
+    var=${line#*:}
+    var=${var/' '/_}
+    var=${var%%_*}
+    var=${var##:*:}
+    echo $var
+  fi
+done
+unset IFS
+
+
+#===================cutspace.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Di Mai 22 20:59:30 CEST 2018
+#Purpose of cutspace:
+
+if ! [[ -d tmp ]]; then
+  mkdir tmp
+fi
+
+for i in {1..10}; do
+  touch "tmp/file $RANDOM.random"
+done
+
+IFS=$'\n'
+echo "Filenames with spaces"
+find * -iname "*.random"
+
+for file in $(ls tmp); do
+  if [[ -f $file ]]; then
+    echo "$file is a file"
+  fi
+  name=${file//' '/_}
+  echo "new name is $name"
+  rename ' ' '_' ${file}
+done
+
+echo "Filenames with underscores spaces"
+find * -iname "*.random"
+#rm -r tmp/*
+unset IFS
+
+
+#===================nslookup.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: So Mai 27 20:33:54 CEST 2018
+#Version: 1.0
+#Purpose of nslookup:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+#=========================================================
+function fun_nslookup() {
+  name=$(nslookup $1 2>/dev/null)
+  name=${name#*=}
+    name=${name%%Authoritative*}
+  echo $name
+}
+inputfile="ips.txt"
+echo "109.74.196.225" > ips.txt
+echo "91.189.90.40" >> ips.txt
+echo "173.194.34.168" >> ips.txt
+
+for  line in $(cat $inputfile); do
+  fun_nslookup $line
+done
+exit 0
+
+
+#===================cut.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: So Mai 27 18:54:02 CEST 2018
+#Version: 1.0
+#Purpose of cut:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+#=========================================================
+
+cutme=false
+eerste=$1
+echo eerste arg $1
+shift
+optie=${eerste:0:2}
+if [ $optie = "-c" ]; then
+  cutme=true
+  van=${eerste#-c}; van=${van%-*}; van=$(($van-1))
+  tot=${eerste##*-}
+  lengte=$(($tot-$van))
+fi
+
+OLDIFS=$IFS
+IFS=$'\n'
+for lijn in `cat "$@"`
+do
+  if $cutme
+    then
+    lijn=${lijn:$van:$lengte}
+  fi
+    echo $lijn
+done
+IFS=$OLDIFS
+#unset IFS
+
+

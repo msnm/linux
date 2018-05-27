@@ -19,9 +19,9 @@ for file in $(ls tmp); do
   if [[ -f $file ]]; then
     echo "$file is a file"
   fi
-  name=${file//' '/"_"}
+  name=${file//' '/_}
   echo "new name is $name"
-  mv -v ${file//' '/"\\ "} ${name}
+  rename ' ' '_' ${file}
 done
 
 echo "Filenames with underscores spaces"

@@ -11,3 +11,5 @@ for lijn in $(cat $bestand); do
   echo $lijn
 done
 unset IFS
+
+

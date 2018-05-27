@@ -5,14 +5,13 @@
 error_geen_nc="Netcat niet geïnstalleerd."
 
 if [ "$(id -u)" != "0" ]; then
-echo "Dit script moet je als root uitvoeren"
-1>&2
+echo "Dit script moet je als root uitvoeren" >&2
 exit 1
 fi
 
-command -v nc >/dev/null || (echo $error_geen_nc >&2 && exit 1)
+command -v nc >/dev/null || { echo $error_geen_nc >&2;  exit 1; }
 
-nc -l 13
+nc -l 13 &
 # dit start met netcat een luisterende poort op poort 13
 
 for teller in {1..100}

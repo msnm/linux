@@ -67,3 +67,5 @@ chmod +x $tmpexpect
 # Opstarten expect script en daarna verwijderen
 ./$tmpexpect
 rm -f $tmpexpec
+
+

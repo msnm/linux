@@ -5,6 +5,8 @@
 
 path=$(which ab)
 url=$1
+
+# command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
 if ! [[ -e $path ]]; then
   echo "Het programma ab is nodig. Installeren kan met sudo apt-get install apche2-utils"
   exit 1

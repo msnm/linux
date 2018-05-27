@@ -28,3 +28,5 @@ if  [[ $# -eq 2 ]] && [[ $size -eq $size ]]  && [[ $1 = $1 ]]; then
 fi
 
 sudo find $path -type f -size "+${size}M" -exec stat -c '%s %n' {} \;
+
+

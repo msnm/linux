@@ -9,6 +9,7 @@ errorCompose="Could not compose logo on file"
 watermark="Logo_V.png"
 #Function to download from a given link!
 function downloadLogo() {
+  echo $FUNCNAME
   wget ${1} >/dev/null  2>&1
 #  watermark=$(wget -qO- $1 >/dev/null  2>&1)
   if [[ ${?} -ne 0 ]]; then
