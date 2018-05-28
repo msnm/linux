@@ -1,0 +1,1169 @@
+ 
+anacron Job `cron.daily' terminated
+anacron Normal exit (1 job run)
+systemd Starting Cleanup of Temporary Directories...
+systemd Started Cleanup of Temporary Directories.
+systemd Started Run anacron jobs.
+anacron Anacron 2.3 started on 2018-05-28
+anacron Normal exit (0 jobs run)
+systemd Starting Message of the Day...
+50-motd-news  * Meltdown, Spectre and Ubuntu: What are the attack vectors,
+50-motd-news    how the fixes work, and everything else you need to know
+50-motd-news    - https://ubu.one/u2Know
+systemd Started Message of the Day.
+CRON (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+systemd Started Run anacron jobs.
+anacron Anacron 2.3 started on 2018-05-28
+anacron Normal exit (0 jobs run)
+CRON (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+systemd Started Run anacron jobs.
+anacron Anacron 2.3 started on 2018-05-28
+anacron Normal exit (0 jobs run)
+systemd Stopping Indicator Messages Service...
+systemd Stopped Indicator Messages Service.
+systemd Stopping LVM2 PV scan on device 253:0...
+systemd Stopping PackageKit Daemon...
+systemd Stopping Save/Restore Sound Card State...
+systemd Stopped target Sound Card.
+at-spi-bus-launcher XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+at-spi-bus-launcher       after 639 requests (639 known processed) with 0 events remaining.
+ xfce4-notifyd: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+systemd xfce4-notifyd.service: Main process exited, code=exited, status=1/FAILURE
+systemd xfce4-notifyd.service: Failed with result 'exit-code'.
+systemd Stopped target Graphical Interface.
+udisksd udisks daemon version 2.7.6 exiting
+systemd Stopping Disk Manager...
+systemd Stopping Daemon for power management...
+systemd Stopping Accessibility services bus...
+systemd Stopped target Target to start indicators for the xfce4-indicator-plugin.
+systemd Stopping Virtual filesystem metadata service...
+obexd Terminating
+systemd Stopping Bluetooth OBEX service...
+systemd Stopping Virtual filesystem service - Media Transfer Protocol monitor...
+systemd Stopping Virtual filesystem service - digital camera monitor...
+systemd Stopped target Default.
+systemd Stopping Virtual filesystem service - GNOME Online Accounts monitor...
+systemd Stopping Virtual filesystem service...
+systemd Stopping Virtual filesystem service - disk device monitor...
+systemd Stopping Virtual filesystem service - Apple File Conduit monitor...
+systemd Stopping D-Bus User Message Bus...
+systemd Stopped Virtual filesystem service - Media Transfer Protocol monitor.
+systemd Stopping User Manager for UID 1000...
+systemd Stopping ACPI event daemon...
+systemd Stopping RealtimeKit Scheduling Policy Service...
+systemd Stopped Virtual filesystem service - disk device monitor.
+systemd Stopping Availability of block devices...
+systemd Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+systemd Stopped Virtual filesystem service - GNOME Online Accounts monitor.
+systemd Stopped Virtual filesystem service - digital camera monitor.
+systemd Stopped Virtual filesystem service - Apple File Conduit monitor.
+systemd Stopped Virtual filesystem metadata service.
+systemd Stopped Bluetooth OBEX service.
+systemd Stopped Virtual filesystem service.
+systemd Stopped Accessibility services bus.
+systemd Stopping Session c2 of user msnm.
+systemd Stopped target Timers.
+systemd Stopped Trigger anacron every hour.
+systemd Stopped Message of the Day.
+systemd Stopped Daily apt upgrade and clean activities.
+systemd Stopped Daily apt download activities.
+systemd Stopped Discard unused blocks once a week.
+systemd Stopping Light Display Manager...
+systemd Stopping Accounts Service...
+systemd Stopped target Multi-User System.
+systemd Stopped D-Bus User Message Bus.
+systemd Stopped target Basic System.
+systemd Stopped target Timers.
+systemd Stopped target Sockets.
+systemd Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd Closed GnuPG cryptographic agent and passphrase cache (restricted).
+systemd Closed GnuPG cryptographic agent and passphrase cache.
+systemd Stopped Initialize hardware monitoring sensors.
+blkdeactivate Deactivating block devices:
+systemd Closed GnuPG cryptographic agent (ssh-agent emulation).
+systemd Closed GnuPG network certificate management daemon.
+systemd Stopped target Paths.
+systemd Closed D-Bus User Message Bus Socket.
+systemd Reached target Shutdown.
+systemd Starting Exit the Session...
+systemd Stopping LSB: Record successful boot for GRUB...
+systemd Stopping Make remote CUPS printers available locally...
+systemd Stopping Regular background program processing daemon...
+systemd Started Exit the Session.
+systemd Received SIGRTMIN+24 from PID 8749 (n/a).
+systemd Stopping LSB: disk temperature monitoring daemon...
+systemd Stopping LSB: Speech Dispatcher...
+systemd Stopping vboxadd-service.service...
+systemd Stopping Unattended Upgrades Shutdown...
+ 
+vboxadd-service vboxadd-service.sh: Stopping VirtualBox Guest Addition service.
+ 
+ 
+ 
+ 
+ 
+systemd Stopping Dispatcher daemon for systemd-networkd...
+blkdeactivate   [SKIP]: unmount of xubuntu--vg-swap_1 (dm-2) mounted on [SWAP]
+systemd Stopped target Login Prompts.
+systemd Stopping OpenBSD Secure Shell server...
+ModemManager <info>  Caught signal, shutting down...
+NetworkManager <info>  [1527519861.5715] modem-manager: ModemManager no longer available
+ModemManager <info>  ModemManager is shut down
+blkdeactivate   [SKIP]: unmount of xubuntu--vg-root (dm-1) mounted on /
+systemd Stopping Modem Manager...
+systemd Stopping crash report submission daemon...
+systemd Stopping Getty on tty1...
+systemd Stopping LSB: automatic crash report generation...
+systemd Stopped Wait until snapd is fully seeded.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes  256
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+kernel: [    0.000000] IOAPIC apic_id 1, version 32, address 0xfec00000, GSI 0-23
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+systemd Started udev Coldplug all Devices.
+systemd-modules-load Inserted module 'lp'
+systemd Started Availability of block devices.
+systemd Mounted Kernel Debug File System.
+systemd Mounted POSIX Message Queue File System.
+systemd Started Remount Root and Kernel File Systems.
+systemd Mounted Huge Pages File System.
+systemd Starting Load/Save Random Seed...
+systemd Starting Flush Journal to Persistent Storage...
+systemd-modules-load Inserted module 'ppdev'
+systemd-modules-load Inserted module 'parport_pc'
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+kernel: [   13.848673] systemd systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+kernel: [   13.848695] systemd Detected virtualization oracle.
+kernel: [   13.848698] systemd Detected architecture x86-64.
+kernel: [   13.849959] systemd Set hostname to <Xubuntu-msnm>.
+kernel: [   14.003649] systemd Created slice User and Session Slice.
+kernel: [   14.003752] systemd Created slice System Slice.
+kernel: [   14.003841] systemd Listening on Journal Audit Socket.
+kernel: [   14.003924] systemd Created slice system-systemd\x2dfsck.slice.
+kernel: [   14.003957] systemd Listening on /dev/initctl Compatibility Named Pipe.
+kernel: [   14.004041] systemd Created slice system-systemd\x2dcryptsetup.slice.
+ 
+ 
+ 
+ 
+kernel: [   14.150445] systemd-journald Received request to flush runtime journal from PID 1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+systemd Started Load Kernel Modules.
+systemd Started LVM2 metadata daemon.
+systemd Mounting Kernel Configuration File System...
+systemd Mounting FUSE Control File System...
+systemd Starting Apply Kernel Variables...
+systemd Started Create Static Device Nodes in /dev.
+systemd Started Load/Save Random Seed.
+systemd Mounted Kernel Configuration File System.
+systemd Mounted FUSE Control File System.
+systemd Started Apply Kernel Variables.
+lvm   2 logical volume(s) in volume group "xubuntu-vg" monitored
+systemd Starting udev Kernel Device Manager...
+systemd Started udev Kernel Device Manager.
+systemd Started Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+systemd Started Set the console keyboard layout.
+systemd Reached target Local File Systems (Pre).
+systemd Starting Show Plymouth Boot Screen...
+systemd Started Show Plymouth Boot Screen.
+systemd Started Forward Password Requests to Plymouth Directory Watch.
+systemd Started Flush Journal to Persistent Storage.
+ 
+ 
+ 
+ 
+ 
+ 
+systemd-udevd link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+ 
+ 
+systemd Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+systemd-udevd link_config: autonegotiation is unset or enabled, the speed and duplex are not writable.
+systemd Created slice system-lvm2\x2dpvscan.slice.
+ 
+ 
+ 
+ 
+ 
+ 
+systemd Starting LVM2 PV scan on device 253:0...
+lvm   2 logical volume(s) in volume group "xubuntu-vg" now active
+systemd Started LVM2 PV scan on device 253:0.
+systemd Found device VBOX_HARDDISK 1.
+systemd Starting File System Check on /dev/disk/by-uuid/b67b3ae5-7cb7-4d10-bee5-57747b8091be...
+systemd Started File System Check Daemon to report status.
+ 
+ 
+ 
+ 
+ 
+ 
+systemd Found device VBOX_HARDDISK 5.
+systemd Starting Cryptography Setup for sda5_crypt...
+systemd-cryptsetup Volume sda5_crypt already active.
+systemd Started Cryptography Setup for sda5_crypt.
+systemd Reached target Local Encrypted Volumes.
+systemd Found device /dev/mapper/xubuntu--vg-swap_1.
+systemd Activating swap /dev/mapper/xubuntu--vg-swap_1...
+ 
+ 
+ 
+ 
+ 
+systemd Activated swap /dev/mapper/xubuntu--vg-swap_1.
+systemd Reached target Swap.
+systemd-fsck /dev/sda1: clean, 317/46848 files, 44130/187136 blocks
+systemd Started File System Check on /dev/disk/by-uuid/b67b3ae5-7cb7-4d10-bee5-57747b8091be.
+systemd Mounting /boot...
+systemd Mounted /boot.
+ 
+ 
+ 
+ 
+systemd Reached target Local File Systems.
+systemd Starting AppArmor initialization...
+systemd Starting Create Volatile Files and Directories...
+systemd Starting Tell Plymouth To Write Out Runtime Data...
+systemd Starting Set console font and keymap...
+systemd Started Tell Plymouth To Write Out Runtime Data.
+systemd Started Set console font and keymap.
+systemd Started Create Volatile Files and Directories.
+systemd Starting Network Name Resolution...
+systemd Starting Update UTMP about System Boot/Shutdown...
+systemd Started Update UTMP about System Boot/Shutdown.
+apparmor  * Starting AppArmor profiles
+systemd-resolved Positive Trust Anchors:
+systemd-resolved . IN DS 19036 8 2 49aac11d7b6f6446702e54a1607371607a1a41855200fd2ce1cdde32f24e8fb5
+systemd-resolved . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+systemd-resolved Negative trust anchors: 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+systemd-resolved Using system hostname 'Xubuntu-msnm'.
+systemd Started Network Name Resolution.
+systemd Reached target Host and Network Name Lookups.
+systemd Reached target Sound Card.
+apparmor Skipping profile in /etc/apparmor.d/disable: usr.bin.firefox
+apparmor Skipping profile in /etc/apparmor.d/disable: usr.sbin.rsyslogd
+apparmor    ...done.
+systemd Started AppArmor initialization.
+systemd Reached target System Initialization.
+systemd Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+systemd Starting Socket activation for snappy daemon.
+systemd Started Daily apt download activities.
+systemd Started Daily apt upgrade and clean activities.
+systemd Listening on CUPS Scheduler.
+systemd Started Trigger anacron every hour.
+systemd Started ACPI Events Check.
+systemd Listening on ACPID Listen Socket.
+systemd Started Message of the Day.
+systemd Started Discard unused blocks once a week.
+systemd Listening on D-Bus System Message Bus Socket.
+systemd Listening on UUID daemon activation socket.
+systemd Started Daily Cleanup of Temporary Directories.
+systemd Reached target Timers.
+systemd Started CUPS Scheduler.
+systemd Reached target Paths.
+systemd Listening on Socket activation for snappy daemon.
+systemd Reached target Sockets.
+systemd Reached target Basic System.
+systemd Starting Detect the available GPUs and deal with any system changes...
+systemd Starting Restore /etc/resolv.conf if the system crashed before the ppp link was shut down...
+systemd Starting Modem Manager...
+systemd Starting Accounts Service...
+systemd Started CUPS Scheduler.
+systemd Started D-Bus System Message Bus.
+gpu-manager /etc/modprobe.d is not a file
+gpu-manager message repeated 3 times: [ /etc/modprobe.d is not a file]
+gpu-manager Error: can't open /lib/modules/4.15.0-22-generic/updates/dkms
+gpu-manager Error: can't open /lib/modules/4.15.0-22-generic/updates/dkms
+dbus-daemon[681]: dbus Unknown group "power" in message bus configuration file
+dbus-daemon [system] AppArmor D-Bus mediation is enabled
+systemd Starting System Logging Service...
+systemd Started Run anacron jobs.
+systemd Started Regular background program processing daemon.
+ModemManager <info>  ModemManager (version 1.6.8) starting in system bus...
+systemd Starting Avahi mDNS/DNS-SD Stack...
+systemd Starting LSB: automatic crash report generation...
+systemd Starting Login Service...
+anacron Anacron 2.3 started on 2018-05-28
+cron (CRON) INFO (pidfile fd = 3)
+systemd Starting Network Manager...
+cron (CRON) INFO (Running @reboot jobs)
+systemd Starting Dispatcher daemon for systemd-networkd...
+systemd Starting Disk Manager...
+systemd Started irqbalance daemon.
+systemd Starting LSB: Record successful boot for GRUB...
+systemd Starting vboxadd.service...
+systemd Starting Save/Restore Sound Card State...
+systemd Starting Thermal Daemon Service...
+systemd Starting LSB: Speech Dispatcher...
+dbus-daemon [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.4' (uid=0 pid=678 comm="/usr/sbin/ModemManager " label="unconfined")
+ 
+ 
+ 
+ 
+udisksd udisks daemon version 2.7.6 starting
+systemd Started ACPI event daemon.
+systemd Starting WPA supplicant...
+systemd Starting Initialize hardware monitoring sensors...
+systemd Starting Snappy daemon...
+systemd Started System Logging Service.
+systemd Started Detect the available GPUs and deal with any system changes.
+systemd Started Restore /etc/resolv.conf if the system crashed before the ppp link was shut down.
+udisksd failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+avahi-daemon Found user 'avahi' (UID 116) and group 'avahi' (GID 124).
+avahi-daemon Successfully dropped root privileges.
+avahi-daemon avahi-daemon 0.7 starting up.
+avahi-daemon Successfully called chroot().
+avahi-daemon Successfully dropped remaining capabilities.
+avahi-daemon No service file found in /etc/avahi/services.
+anacron Normal exit (0 jobs run)
+systemd Started Save/Restore Sound Card State.
+apport  * Starting automatic crash report generation: apport
+sensors No sensors found!
+sensors Make sure you loaded all the kernel drivers you need.
+sensors Try sensors-detect to find out which these are.
+ 
+speech-dispatcher  * speech-dispatcher disabled; edit /etc/default/speech-dispatcher
+ 
+apport    ...done.
+avahi-daemon Joining mDNS multicast group on interface lo.IPv6 with address ::1.
+avahi-daemon New relevant interface lo.IPv6 for mDNS.
+avahi-daemon Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+avahi-daemon New relevant interface lo.IPv4 for mDNS.
+avahi-daemon Network interface enumeration completed.
+avahi-daemon Registering new address record for ::1 on lo.*.
+avahi-daemon Registering new address record for 127.0.0.1 on lo.IPv4.
+ 
+ 
+systemd Started LSB: automatic crash report generation.
+udisksd Failed to load the 'mdraid' libblockdev plugin
+systemd Started LSB: Speech Dispatcher.
+sensors No sensors found!
+sensors Make sure you loaded all the kernel drivers you need.
+sensors Try sensors-detect to find out which these are.
+wpa_supplicant Successfully initialized wpa_supplicant
+systemd Started Initialize hardware monitoring sensors.
+thermald NO RAPL sysfs present
+thermald 22 CPUID levels; family:model:stepping 0x6:8e:9 (6:142:9)
+thermald Polling mode is enabled: 4
+thermald Thermal DTS: No coretemp sysfs found
+systemd Started Avahi mDNS/DNS-SD Stack.
+grub-common  * Recording successful boot for GRUB
+thermald Thermal DTS or hwmon: No Zones present Need to configure manually
+thermald No thermal sensors found
+thermald THD engine start failed
+systemd Started Login Service.
+systemd Started WPA supplicant.
+systemd Started Thermal Daemon Service.
+systemd Started Make remote CUPS printers available locally.
+systemd Starting Authorization Manager...
+NetworkManager <info>  [1527526492.2119] NetworkManager (version 1.10.6) is starting... (for the first time)
+NetworkManager <info>  [1527526492.2125] Read config: /etc/NetworkManager/NetworkManager.conf (lib: 10-dns-resolved.conf, no-mac-addr-change.conf) (run: 10-globally-managed-devices.conf) (etc: default-wifi-powersave-on.conf)
+polkitd started daemon version 0.105 using authority implementation `local' version `0.105'
+dbus-daemon [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+systemd Started Authorization Manager.
+accounts-daemon started daemon version 0.6.45
+systemd Started Accounts Service.
+snapd AppArmor status: apparmor is enabled and all features are available
+NetworkManager <info>  [1527526492.2469] manager[0x56430854e060]: monitoring kernel firmware directory '/lib/firmware'.
+NetworkManager <info>  [1527526492.2521] monitoring ifupdown state file '/run/network/ifstate'.
+systemd Started Modem Manager.
+dbus-daemon [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.11' (uid=0 pid=704 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+systemd Starting Hostname Service...
+snapd 2018/05/28 18:54:52.291113 daemon.go:323: started snapd/2.32.8+18.04 (series 16; classic) ubuntu/18.04 (amd64) linux/4.15.0-22-generic.
+systemd Started Snappy daemon.
+systemd Starting Wait until snapd is fully seeded...
+grub-common    ...done.
+systemd Started LSB: Record successful boot for GRUB.
+snapd 2018/05/28 18:54:52.367764 stateengine.go:101: state ensure error: Get https://api.snapcraft.io/api/v1/snaps/sections: dial tcp: lookup api.snapcraft.io on 127.0.0.53:53: server misbehaving
+dbus-daemon [system] Successfully activated service 'org.freedesktop.hostname1'
+systemd Started Hostname Service.
+NetworkManager <info>  [1527526492.3793] hostname: hostname: using hostnamed
+NetworkManager <info>  [1527526492.3794] hostname: hostname changed from (none) to "Xubuntu-msnm"
+NetworkManager <info>  [1527526492.3796] dns-mgr[0x56430856c940]: init: dns=systemd-resolved, rc-manager=symlink, plugin=systemd-resolved
+NetworkManager <info>  [1527526492.3799] manager[0x56430854e060]: rfkill: WiFi hardware radio set enabled
+NetworkManager <info>  [1527526492.3799] manager[0x56430854e060]: rfkill: WWAN hardware radio set enabled
+systemd Started Wait until snapd is fully seeded.
+systemd Started Network Manager.
+systemd Reached target Network.
+systemd Starting Permit User Sessions...
+systemd Starting The Apache HTTP Server...
+systemd Started Unattended Upgrades Shutdown.
+dbus-daemon [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.11' (uid=0 pid=704 comm="/usr/sbin/NetworkManager --no-daemon " label="unconfined")
+systemd Starting OpenBSD Secure Shell server...
+systemd Starting Network Manager Wait Online...
+systemd Starting Network Manager Script Dispatcher Service...
+systemd Started Permit User Sessions.
+systemd Starting Hold until boot process finishes up...
+systemd Started Network Manager Script Dispatcher Service.
+dbus-daemon [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+NetworkManager <info>  [1527526492.5744] init!
+NetworkManager <info>  [1527526492.5762]       interface-parser: parsing file /etc/network/interfaces
+NetworkManager <info>  [1527526492.5766]       interface-parser: finished parsing file /etc/network/interfaces
+NetworkManager <info>  [1527526492.5766] management mode: unmanaged
+NetworkManager <info>  [1527526492.5768] devices added (path: /sys/devices/pci0000:00/0000:00:03.0/net/enp0s3, iface: enp0s3)
+NetworkManager <info>  [1527526492.5768] device added (path: /sys/devices/pci0000:00/0000:00:03.0/net/enp0s3, iface: enp0s3): no ifupdown configuration found.
+NetworkManager <info>  [1527526492.5769] devices added (path: /sys/devices/virtual/net/lo, iface: lo)
+NetworkManager <info>  [1527526492.5769] device added (path: /sys/devices/virtual/net/lo, iface: lo): no ifupdown configuration found.
+NetworkManager <info>  [1527526492.5769] end _init.
+NetworkManager <info>  [1527526492.5769] settings: loaded plugin ifupdown: (C) 2008 Canonical Ltd.  To report bugs please use the NetworkManager mailing list. (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-settings-plugin-ifupdown.so)
+NetworkManager <info>  [1527526492.5769] settings: loaded plugin keyfile: (c) 2007 - 2016 Red Hat, Inc.  To report bugs please use the NetworkManager mailing list.
+NetworkManager <info>  [1527526492.5769] (140025984) ... get_connections.
+NetworkManager <info>  [1527526492.5769] (140025984) ... get_connections (managed=false): return empty list.
+NetworkManager <info>  [1527526492.5780] get unmanaged devices count: 0
+NetworkManager <info>  [1527526492.5781] manager: rfkill: WiFi enabled by radio killswitch; enabled by state file
+NetworkManager <info>  [1527526492.5781] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+NetworkManager <info>  [1527526492.5781] manager: Networking is enabled by state file
+NetworkManager <info>  [1527526492.5782] dhcp-init: Using DHCP client 'dhclient'
+NetworkManager <info>  [1527526492.5791] Loaded device plugin: NMBondDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMBridgeDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMDummyDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMEthernetDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMInfinibandDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMIPTunnelDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMMacsecDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMMacvlanDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMPppDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMTunDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMVethDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMVlanDeviceFactory (internal)
+NetworkManager <info>  [1527526492.5792] Loaded device plugin: NMVxlanDeviceFactory (internal)
+ 
+ 
+NetworkManager <info>  [1527526492.5820] Loaded device plugin: NMWifiFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-device-plugin-wifi.so)
+NetworkManager <info>  [1527526492.5878] Loaded device plugin: NMTeamFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-device-plugin-team.so)
+NetworkManager <info>  [1527526492.5903] Loaded device plugin: NMWwanFactory (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-device-plugin-wwan.so)
+NetworkManager <info>  [1527526492.5952] Loaded device plugin: NMBluezManager (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-device-plugin-bluetooth.so)
+NetworkManager <info>  [1527526492.5979] Loaded device plugin: NMAtmManager (/usr/lib/x86_64-linux-gnu/NetworkManager/libnm-device-plugin-adsl.so)
+NetworkManager <info>  [1527526492.5997] device (lo): carrier: link connected
+NetworkManager <info>  [1527526492.6127] manager: (lo): new Generic device (/org/freedesktop/NetworkManager/Devices/1)
+networkd-dispatcher WARNING: systemd-networkd is not running, output will be incomplete.
+systemd Started Dispatcher daemon for systemd-networkd.
+systemd Started OpenBSD Secure Shell server.
+NetworkManager <info>  [1527526492.6459] manager: (enp0s3): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+NetworkManager <info>  [1527526492.6483] keyfile: add connection in-memory (14f27695-c711-3219-a286-e57004f6cace,"Wired connection 1")
+NetworkManager <info>  [1527526492.6634] settings: (enp0s3): created default wired connection 'Wired connection 1'
+NetworkManager <info>  [1527526492.6661] device (enp0s3): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+ 
+ 
+ 
+ 
+NetworkManager <warn>  [1527526492.6782] Error: failed to open /run/network/ifstate
+NetworkManager <info>  [1527526492.7112] modem-manager: ModemManager available
+NetworkManager <info>  [1527526492.7216] device (enp0s3): carrier: link connected
+NetworkManager <info>  [1527526492.7229] device (enp0s3): state change: unavailable -> disconnected (reason 'carrier-changed', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.7322] policy: auto-activating connection 'Wired connection 1'
+NetworkManager <info>  [1527526492.7344] device (enp0s3): Activation: starting connection 'Wired connection 1' (14f27695-c711-3219-a286-e57004f6cace)
+NetworkManager <info>  [1527526492.7378] device (enp0s3): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.7391] manager: NetworkManager state is now CONNECTING
+NetworkManager <info>  [1527526492.7437] device (enp0s3): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.7493] device (enp0s3): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+systemd Started Disk Manager.
+udisksd Acquired the name org.freedesktop.UDisks2 on the system message bus
+NetworkManager <info>  [1527526492.7533] dhcp4 (enp0s3): activation: beginning transaction (timeout in 45 seconds)
+apachectl AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+systemd Started The Apache HTTP Server.
+NetworkManager <info>  [1527526492.7977] dhcp4 (enp0s3): dhclient started with pid 801
+dhclient DHCPREQUEST of 10.0.2.15 on enp0s3 to 255.255.255.255 port 67 (xid=0x3d06bb0c)
+dhclient DHCPACK of 10.0.2.15 from 10.0.2.2
+NetworkManager <info>  [1527526492.8619] dhcp4 (enp0s3):   address 10.0.2.15
+NetworkManager <info>  [1527526492.8620] dhcp4 (enp0s3):   plen 24 (255.255.255.0)
+NetworkManager <info>  [1527526492.8621] dhcp4 (enp0s3):   gateway 10.0.2.2
+NetworkManager <info>  [1527526492.8622] dhcp4 (enp0s3):   lease time 86400
+NetworkManager <info>  [1527526492.8623] dhcp4 (enp0s3):   nameserver '8.8.8.8'
+NetworkManager <info>  [1527526492.8624] dhcp4 (enp0s3): state changed unknown -> bound
+avahi-daemon Joining mDNS multicast group on interface enp0s3.IPv4 with address 10.0.2.15.
+avahi-daemon New relevant interface enp0s3.IPv4 for mDNS.
+avahi-daemon Registering new address record for 10.0.2.15 on enp0s3.IPv4.
+NetworkManager <info>  [1527526492.8643] device (enp0s3): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.8658] device (enp0s3): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.8674] device (enp0s3): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+NetworkManager <info>  [1527526492.8684] manager: NetworkManager state is now CONNECTED_LOCAL
+NetworkManager <info>  [1527526492.8708] manager: NetworkManager state is now CONNECTED_SITE
+NetworkManager <info>  [1527526492.8722] policy: set 'Wired connection 1' (enp0s3) as default for IPv4 routing and DNS
+NetworkManager <info>  [1527526492.8729] device (enp0s3): Activation: successful, device activated.
+NetworkManager <info>  [1527526492.8739] manager: startup complete
+ 
+ 
+systemd Started Network Manager Wait Online.
+systemd Reached target Network is Online.
+systemd Started crash report submission daemon.
+NetworkManager <info>  [1527526492.8759] manager: NetworkManager state is now CONNECTED_GLOBAL
+ 
+vboxadd VirtualBox Guest Additions: Starting.
+vboxadd /opt/VBoxGuestAdditions-5.2.8/init/vboxadd: 256: /opt/VBoxGuestAdditions-5.2.8/init/vboxadd: cannot create : Directory nonexistent
+ 
+systemd Starting Tool to automatically collect and submit kernel crash signatures...
+whoopsie [18:54:52] Using lock path: /var/lock/whoopsie/lock
+dhclient bound to 10.0.2.15 -- renewal in 34701 seconds.
+systemd Starting LSB: disk temperature monitoring daemon...
+systemd kerneloops.service: Found left-over process 903 (kerneloops) in control group while starting unit. Ignoring.
+systemd This usually indicates unclean termination of a previous run, or service implementation deficiencies.
+systemd Started Tool to automatically collect and submit kernel crash signatures.
+systemd Started LSB: disk temperature monitoring daemon.
+systemd Reloading OpenBSD Secure Shell server.
+systemd Reloaded OpenBSD Secure Shell server.
+whoopsie [18:54:53] The default IPv4 route is: /org/freedesktop/NetworkManager/ActiveConnection/1
+whoopsie [18:54:53] Not a paid data plan: /org/freedesktop/NetworkManager/ActiveConnection/1
+whoopsie [18:54:53] Found usable connection: /org/freedesktop/NetworkManager/ActiveConnection/1
+systemd Started vboxadd.service.
+systemd Starting Light Display Manager...
+systemd Starting vboxadd-service.service...
+vboxadd-service vboxadd-service.sh: Starting VirtualBox Guest Addition service.
+systemd Reloading OpenBSD Secure Shell server.
+ 
+systemd Reloaded OpenBSD Secure Shell server.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+systemd Started vboxadd-service.service.
+systemd Received SIGRTMIN+21 from PID 254 (plymouthd).
+systemd Started Hold until boot process finishes up.
+systemd Starting Set console scheme...
+systemd Started Set console scheme.
+systemd Created slice system-getty.slice.
+systemd Started Getty on tty1.
+systemd Reached target Login Prompts.
+systemd Reached target Multi-User System.
+systemd Started Light Display Manager.
+systemd Reached target Graphical Interface.
+systemd Starting Update UTMP about System Runlevel Changes...
+systemd Started Update UTMP about System Runlevel Changes.
+systemd Startup finished in 13.815s (kernel) + 5.757s (userspace) = 19.572s.
+avahi-daemon Server startup complete. Host name is Xubuntu-msnm.local. Local service cookie is 3879549568.
+systemd Created slice User Slice of lightdm.
+systemd Started Session c1 of user lightdm.
+systemd Starting User Manager for UID 110...
+systemd Listening on GnuPG cryptographic agent (ssh-agent emulation).
+systemd Listening on GnuPG cryptographic agent and passphrase cache.
+systemd Listening on GnuPG network certificate management daemon.
+systemd Reached target Timers.
+systemd Reached target Paths.
+systemd Starting D-Bus User Message Bus Socket.
+systemd Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+systemd Listening on D-Bus User Message Bus Socket.
+systemd Reached target Sockets.
+systemd Reached target Basic System.
+systemd Started User Manager for UID 110.
+systemd Reached target Default.
+systemd Startup finished in 75ms.
+systemd Started D-Bus User Message Bus.
+dbus-daemon [session uid=110 pid=1057] AppArmor D-Bus mediation is enabled
+dbus-daemon [session uid=110 pid=1057] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.1' (uid=110 pid=1055 comm="/usr/sbin/lightdm-gtk-greeter " label="unconfined")
+systemd Starting Accessibility services bus...
+dbus-daemon [session uid=110 pid=1057] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.2' (uid=110 pid=1058 comm="/usr/lib/at-spi2-core/at-spi-bus-launcher " label="unconfined")
+systemd Starting Virtual filesystem service...
+dbus-daemon [session uid=110 pid=1057] Successfully activated service 'org.gtk.vfs.Daemon'
+systemd Started Virtual filesystem service.
+dbus-daemon [session uid=110 pid=1057] Successfully activated service 'org.a11y.Bus'
+systemd Started Accessibility services bus.
+at-spi-bus-launcher[1058]: dbus-daemon Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=110 pid=1055 comm="/usr/sbin/lightdm-gtk-greeter " label="unconfined")
+at-spi-bus-launcher[1058]: dbus-daemon Successfully activated service 'org.a11y.atspi.Registry'
+at-spi-bus-launcher SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+avahi-daemon Joining mDNS multicast group on interface enp0s3.IPv6 with address fe80::59d8:33ae:7e98:9d75.
+avahi-daemon New relevant interface enp0s3.IPv6 for mDNS.
+avahi-daemon Registering new address record for fe80::59d8:33ae:7e98:9d75 on enp0s3.*.
+ModemManager <info>  Couldn't check support for device at '/sys/devices/pci0000:00/0000:00:03.0': not supported by any plugin
+systemd session-c1.scope: Killing process 1012 (lightdm) with signal SIGTERM.
+systemd session-c1.scope: Killing process 1051 (gnome-keyring-d) with signal SIGTERM.
+systemd session-c1.scope: Killing process 1054 (lightdm-greeter) with signal SIGTERM.
+systemd session-c1.scope: Killing process 1055 (lightdm-gtk-gre) with signal SIGTERM.
+systemd Stopping Session c1 of user lightdm.
+systemd Created slice User Slice of msnm.
+systemd Starting User Manager for UID 1000...
+systemd Started Session c2 of user msnm.
+systemd Stopped Session c1 of user lightdm.
+systemd Stopping User Manager for UID 110...
+systemd Stopping Accessibility services bus...
+systemd Stopped target Default.
+systemd Stopping Virtual filesystem service...
+systemd Stopping D-Bus User Message Bus...
+systemd Stopped D-Bus User Message Bus.
+systemd Stopped Virtual filesystem service.
+systemd Stopped Accessibility services bus.
+systemd Stopped target Basic System.
+systemd Stopped target Sockets.
+systemd Closed GnuPG network certificate management daemon.
+systemd Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd Closed D-Bus User Message Bus Socket.
+systemd Closed GnuPG cryptographic agent and passphrase cache (restricted).
+systemd Closed GnuPG cryptographic agent and passphrase cache.
+systemd Closed GnuPG cryptographic agent (ssh-agent emulation).
+systemd Stopped target Timers.
+systemd Stopped target Paths.
+systemd Reached target Shutdown.
+systemd Starting Exit the Session...
+systemd Started Exit the Session.
+systemd Received SIGRTMIN+24 from PID 1122 (n/a).
+systemd Stopped User Manager for UID 110.
+systemd Removed slice User Slice of lightdm.
+systemd Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+systemd Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+systemd Starting D-Bus User Message Bus Socket.
+systemd Listening on GnuPG cryptographic agent and passphrase cache.
+systemd Reached target Timers.
+systemd Reached target Paths.
+systemd Listening on GnuPG network certificate management daemon.
+systemd Listening on GnuPG cryptographic agent (ssh-agent emulation).
+systemd Listening on D-Bus User Message Bus Socket.
+systemd Reached target Sockets.
+systemd Reached target Basic System.
+systemd Started User Manager for UID 1000.
+systemd Reached target Default.
+systemd Startup finished in 67ms.
+systemd Started D-Bus User Message Bus.
+dbus-daemon [session uid=1000 pid=1142] AppArmor D-Bus mediation is enabled
+dbus-daemon [session uid=1000 pid=1142] Activating service name='org.xfce.Xfconf' requested by ':1.4' (uid=1000 pid=1269 comm="xfce4-session " label="unconfined")
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.xfce.Xfconf'
+spice-vdagent Cannot access vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.12' (uid=1000 pid=1294 comm="light-locker " label="unconfined")
+systemd Starting Virtual filesystem service...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.Daemon'
+systemd Started Virtual filesystem service.
+dbus-daemon [session uid=1000 pid=1142] Activating service name='ca.desrt.dconf' requested by ':1.12' (uid=1000 pid=1294 comm="light-locker " label="unconfined")
+systemd Starting Accessibility services bus...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'ca.desrt.dconf'
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.16' (uid=1000 pid=1294 comm="light-locker " label="unconfined")
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.a11y.Bus'
+systemd Started Accessibility services bus.
+at-spi-bus-launcher[1314]: dbus-daemon Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=1000 pid=1294 comm="light-locker " label="unconfined")
+at-spi-bus-launcher[1314]: dbus-daemon Successfully activated service 'org.a11y.atspi.Registry'
+at-spi-bus-launcher SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+dbus-daemon [system] Activating via systemd: service name='org.freedesktop.RealtimeKit1' unit='rtkit-daemon.service' requested by ':1.37' (uid=1000 pid=1348 comm="/usr/bin/pulseaudio --start --log-target=syslog " label="unconfined")
+systemd Starting RealtimeKit Scheduling Policy Service...
+dbus-daemon [system] Successfully activated service 'org.freedesktop.RealtimeKit1'
+systemd Started RealtimeKit Scheduling Policy Service.
+rtkit-daemon Successfully called chroot.
+rtkit-daemon Successfully dropped privileges.
+rtkit-daemon Successfully limited resources.
+rtkit-daemon Running.
+rtkit-daemon Successfully made thread 1348 of process 1348 (n/a) owned by '1000' high priority at nice level -11.
+rtkit-daemon Supervising 1 threads of 1 processes of 1 users.
+rtkit-daemon Watchdog thread running.
+rtkit-daemon Canary thread running.
+pulseaudio [pulseaudio] alsa-util.c: Disabling timer-based scheduling because running inside a VM.
+pulseaudio [pulseaudio] sink.c: Default and alternate sample rates are the same.
+rtkit-daemon Supervising 1 threads of 1 processes of 1 users.
+rtkit-daemon Successfully made thread 1361 of process 1348 (n/a) owned by '1000' RT at priority 5.
+rtkit-daemon Supervising 2 threads of 1 processes of 1 users.
+pulseaudio [pulseaudio] alsa-util.c: Disabling timer-based scheduling because running inside a VM.
+rtkit-daemon Supervising 2 threads of 1 processes of 1 users.
+rtkit-daemon Successfully made thread 1362 of process 1348 (n/a) owned by '1000' RT at priority 5.
+rtkit-daemon Supervising 3 threads of 1 processes of 1 users.
+dbus-daemon [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.41' (uid=1000 pid=1348 comm="/usr/bin/pulseaudio --start --log-target=syslog " label="unconfined")
+dbus-daemon [system] Activating via systemd: service name='org.freedesktop.UPower' unit='upower.service' requested by ':1.43' (uid=1000 pid=1287 comm="xfsettingsd " label="unconfined")
+systemd Starting Daemon for power management...
+dbus-daemon [system] Successfully activated service 'org.freedesktop.UPower'
+systemd Started Daemon for power management.
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.freedesktop.Notifications' unit='xfce4-notifyd.service' requested by ':1.20' (uid=1000 pid=1330 comm="xfce4-power-manager " label="unconfined")
+systemd Starting XFCE notifications service...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.freedesktop.Notifications'
+systemd Started XFCE notifications service.
+dbus-daemon [session uid=1000 pid=1142] Activating service name='org.freedesktop.thumbnails.Thumbnailer1' requested by ':1.25' (uid=1000 pid=1289 comm="xfdesktop " label="unconfined")
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer atril-thumbnailer -s %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer gnome-thumbnail-font --size %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.UDisks2VolumeMonitor' unit='gvfs-udisks2-volume-monitor.service' requested by ':1.29' (uid=1000 pid=1409 comm="/usr/lib/x86_64-linux-gnu/tumbler-1/tumblerd " label="unconfined")
+systemd Starting Virtual filesystem service - disk device monitor...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.UDisks2VolumeMonitor'
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.MTPVolumeMonitor' unit='gvfs-mtp-volume-monitor.service' requested by ':1.29' (uid=1000 pid=1409 comm="/usr/lib/x86_64-linux-gnu/tumbler-1/tumblerd " label="unconfined")
+systemd Started Virtual filesystem service - disk device monitor.
+systemd Starting Virtual filesystem service - Media Transfer Protocol monitor...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.MTPVolumeMonitor'
+systemd Started Virtual filesystem service - Media Transfer Protocol monitor.
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.GoaVolumeMonitor' unit='gvfs-goa-volume-monitor.service' requested by ':1.29' (uid=1000 pid=1409 comm="/usr/lib/x86_64-linux-gnu/tumbler-1/tumblerd " label="unconfined")
+systemd Starting Virtual filesystem service - GNOME Online Accounts monitor...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.GoaVolumeMonitor'
+systemd Started Virtual filesystem service - GNOME Online Accounts monitor.
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.GPhoto2VolumeMonitor' unit='gvfs-gphoto2-volume-monitor.service' requested by ':1.29' (uid=1000 pid=1409 comm="/usr/lib/x86_64-linux-gnu/tumbler-1/tumblerd " label="unconfined")
+systemd Starting Virtual filesystem service - digital camera monitor...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.GPhoto2VolumeMonitor'
+systemd Started Virtual filesystem service - digital camera monitor.
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.AfcVolumeMonitor' unit='gvfs-afc-volume-monitor.service' requested by ':1.29' (uid=1000 pid=1409 comm="/usr/lib/x86_64-linux-gnu/tumbler-1/tumblerd " label="unconfined")
+systemd Starting Virtual filesystem service - Apple File Conduit monitor...
+gvfs-afc-volume-monitor Volume monitor alive
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.AfcVolumeMonitor'
+systemd Started Virtual filesystem service - Apple File Conduit monitor.
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.freedesktop.thumbnails.Thumbnailer1'
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.gtk.vfs.Metadata' unit='gvfs-metadata.service' requested by ':1.11' (uid=1000 pid=1289 comm="xfdesktop " label="unconfined")
+systemd Starting Virtual filesystem metadata service...
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.gtk.vfs.Metadata'
+systemd Started Virtual filesystem metadata service.
+systemd Started Indicator Messages Service.
+systemd Reached target Target to start indicators for the xfce4-indicator-plugin.
+pulseaudio [pulseaudio] bluez5-util.c: GetManagedObjects() failed: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+dbus-daemon [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.51' (uid=1000 pid=1339 comm="/usr/bin/python3 /usr/bin/blueman-applet " label="unconfined")
+dbus-daemon [session uid=1000 pid=1142] Activating via systemd: service name='org.bluez.obex' unit='dbus-org.bluez.obex.service' requested by ':1.54' (uid=1000 pid=1339 comm="/usr/bin/python3 /usr/bin/blueman-applet " label="unconfined")
+systemd Starting Bluetooth OBEX service...
+obexd OBEX daemon 5.48
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.bluez.obex'
+systemd Started Bluetooth OBEX service.
+dbus-daemon [system] Activating service name='org.blueman.Mechanism' requested by ':1.51' (uid=1000 pid=1339 comm="/usr/bin/python3 /usr/bin/blueman-applet " label="unconfined") (using servicehelper)
+org.blueman.Mechanism Unable to init server: Could not connect: Connection refused
+org.blueman.Mechanism Unable to init server: Could not connect: Connection refused
+ 
+dbus-daemon [system] Successfully activated service 'org.blueman.Mechanism'
+blueman-mechani gtk_icon_theme_get_for_screen: assertion 'GDK_IS_SCREEN (screen)' failed
+ 
+ 
+ 
+ 
+ 
+dbus-daemon [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.56' (uid=1000 pid=1853 comm="/usr/share/atom/atom " label="unconfined")
+systemd Started Run anacron jobs.
+anacron Anacron 2.3 started on 2018-05-28
+anacron Normal exit (0 jobs run)
+systemd Starting Cleanup of Temporary Directories...
+systemd Started Cleanup of Temporary Directories.
+CRON (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+systemd Starting Message of the Day...
+50-motd-news  * Meltdown, Spectre and Ubuntu: What are the attack vectors,
+50-motd-news    how the fixes work, and everything else you need to know
+50-motd-news    - https://ubu.one/u2Know
+systemd Started Message of the Day.
+dbus-daemon [session uid=1000 pid=1142] Activating service name='org.freedesktop.thumbnails.Thumbnailer1' requested by ':1.10' (uid=1000 pid=1286 comm="Thunar --daemon " label="unconfined")
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer atril-thumbnailer -s %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer gnome-thumbnail-font --size %s %u %o
+org.freedesktop.thumbnails.Thumbnailer1 Registered thumbailer /usr/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+dbus-daemon [session uid=1000 pid=1142] Successfully activated service 'org.freedesktop.thumbnails.Thumbnailer1'

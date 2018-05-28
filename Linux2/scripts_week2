@@ -1,0 +1,257 @@
+#===================autologin.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Mo Mai 21 16:10:19 CEST 2018
+#Purpose of autologin:
+port="22"
+tmpexpect="expect.sh"
+
+error_geen_ssh="Het programma ssh is nodig. Installeren kan met sudo apt-get install openssh-client"
+error_geen_expect="Het programma expect is nodig. Installeren kan met sudo apt-get install expect"
+error_usage="Usage: `basename $0` hostname username password"
+error_url="De host is niet bereikbaar"
+
+# Nakijken of alle argumenten werden meegegeven
+if [ -z "$3" ]; then echo $error_usage >&2 ; exit 1;
+else
+   echo Automatic login at $1
+   host=$1
+fi
+
+# Kijk met nc na of ssh draait -> ok => tekst, kan ook met $?
+nc -w 1 $host $port 2>/dev/null >/dev/null
+if [ $? -ne 0 ]; then
+echo $error_url>&2 && exit 1
+fi
+
+
+# Nakijken of ssh en expect geinstalleerd zijn
+command -v ssh >/dev/null 2> /dev/null  || { echo >&2 $error_geen_ssh ; exit 1; }
+command -v expect >/dev/null 2> /dev/null || { echo >&2 $error_geen_expect; exit 1; }
+
+
+# Schrijven van een expect script
+echo '#!/usr/bin/expect -f' > $tmpexpect
+echo 'set timeout 20' >> $tmpexpect
+echo "spawn ssh -o \"StrictHostKeyChecking no\" $2@$1" >> $tmpexpect
+echo 'expect "*assword:*"'  >> $tmpexpect
+echo "send $3\r">> $tmpexpect
+echo "interact" >> $tmpexpect
+echo "exit" >> $tmpexpect
+chmod +x $tmpexpect
+
+# Opstarten expect script en daarna verwijderen
+./$tmpexpect
+rm -f $tmpexpect
+
+
+
+
+#===================maakcron.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 21:17:33 CEST 2018
+#Purpose of maakcron: voert elke minuut een bepaald commando uit
+errorRoot="Start the script as root!"
+errorNoArg="Please type $(basename $0) -h or $(basename $0) --help for more information"
+errorArg="One argument needs to be specified. The argument should be a executable file"
+helpMessage="Usage: sudo $(basename $0) [--remove] exucatable file \n
+--remove     Remove cron file\n
+--help or -h Display this help message"
+#Check if user is logged on as root
+if ! [[ $(id -u) -eq 0 ]]; then
+  echo $errorRoot
+  echo $errorNoArg
+  exit 1;
+fi
+
+#Check if at least one argument is specified.
+if ! [[ $# -ge 1 ]]; then
+  echo $errorNoArg
+  exit 1;
+fi
+
+#When help option specified
+if [[  $1 = '--help' || $1 = '-h' ]]; then
+  echo -e $helpMessage
+  exit 1
+fi
+
+if [[ $1 = '--remove' ]]; then
+  if [[ -f "/etc/cron.d/${2}.cron" ]]; then
+    sudo rm -f "/etc/cron.d/${2}.cron"
+    if [[ $? -eq 0 ]]; then
+      echo "Removed succesfully $2"
+    else "Remove failed of $2"
+    fi
+  else "$1 does not exist, so it cannot be removed"
+    exit 1
+  fi
+  exit 0
+fi
+
+
+if [[ -r $1  && -x $1 ]] ; then
+  echo "creating chron $1"
+  bestand="/etc/cron.d/${1}.cron"
+  touch $bestand
+  if ! [[ $? -eq 0 ]]; then
+    echo "Could not create file $bestand" >2$
+    exit 1
+  fi
+  echo "# Minute Hour Day_of_Month Month Day of Week User Command" >> ${bestand}
+  echo "# (0-59) (0-23)  (1-31)    (1-12)  (0-6)" >> ${bestand}
+  echo "***** root ${1}"  >> ${bestand}
+  exit 0
+else
+  echo $errorArg
+  exit 1
+fi
+
+
+
+
+#===================findbig.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 13:30:41 CEST 2018
+#Purpose of createScript.sh:
+helpmessage="Usage: $(basename $0) arg 1 arg 2  Example: $(basename $0) /usr/bin 10"
+versionmessage="$(basename $0) version 0.1"
+path="/"
+size=10
+
+if [[ $1 = "--help" ]]; then
+  echo $helpmessage
+  exit 1
+fi
+
+if [[ $1 = "--version" ]]; then
+  echo $versionmessage
+  exit 1
+fi
+
+
+if [[ $# -eq 1 ]] && [[ $1 = $1 ]]; then
+  path=$1
+fi
+
+if  [[ $# -eq 2 ]] && [[ $size -eq $size ]]  && [[ $1 = $1 ]]; then
+  size=$2
+  path=$1
+fi
+
+sudo find $path -type f -size "+${size}M" -exec stat -c '%s %n' {} \;
+
+
+
+
+#===================netcat.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Mo Mai 21 16:18:41 CEST 2018
+#Purpose of netcat:
+error_geen_nc="Netcat niet geïnstalleerd."
+
+if [ "$(id -u)" != "0" ]; then
+echo "Dit script moet je als root uitvoeren" >&2
+exit 1
+fi
+
+command -v nc >/dev/null || { echo $error_geen_nc >&2;  exit 1; }
+
+nc -l 13 &
+# dit start met netcat een luisterende poort op poort 13
+
+for teller in {1..100}
+do
+lsof -nPi tcp:${teller} | grep -i "listen"
+done
+
+
+#===================apachetest.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 13:02:08 CEST 2018
+#Purpose of createScript.sh:
+
+path=$(which ab)
+url=$1
+
+# command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+if ! [[ -e $path ]]; then
+  echo "Het programma ab is nodig. Installeren kan met sudo apt-get install apche2-utils"
+  exit 1
+fi
+
+if [[ -z $1  ]]; then
+  url="127.0.0.1"
+fi
+
+curl -ss $url >/dev/null
+if [[ $? -ne 0  ]]; then
+  echo "De url $url is niet bereikbaar"
+  exit 2
+fi
+
+sudo service apache2 start
+ab -n 100 -kc 10 "$url/"
+./apachetest $url
+
+
+#===================backup.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 15:12:42 CEST 2018
+#Purpose of bachp:
+
+homedir="~"
+error_dir="One argument - a dir - should be specified. $1 is not a known dir"
+error_root="You need to run this script as root"
+errorlog="error_$(basename $0).log"
+backuplog="b_$(basename $0).log"
+filename="Backup_$(date +%Y_%m_%d_%H_%M_%S).tar"
+
+
+#Check if one argument is specified and is a dir
+if [[ -n $1 ]]; then
+  if [[ -d $1 ]]; then
+    homedir=$1
+  else
+    echo $error_dir >>${errorlog}
+  fi
+fi
+
+if [[ $(id -u) -ne 0 ]] ; then
+  echo $error_root >>${errorlog}
+  exit 1
+fi
+
+# -czvf makes a new tar for each file, therefore only the last file is in the tar!!!
+#find $dir -iname "*.sh" -mtime +48 -exec  tar -czvf $filename {} \; #backup all files modified less then two days ago
+
+#We need to append files to the tar file us the -r option!
+find $dir -iname "*.sh" -mtime -24 -exec  tar -rvf $filename {} \;  >>"${backuplog}" 2>>"${errorlog}"
+
+
+
+
+#===================cmdline.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 14:31:17 CEST 2018
+#Purpose of cmdline:
+
+path="/proc/*/cmdline"
+
+for cmd in $(ls $path)
+do
+  find  $cmd -size +0M 2>/dev/null
+  if [[ $? -eq 0 ]] && [[ -f $cmd ]] ; then
+      grep -aH sbin $cmd
+  fi
+done
+
+
+
+

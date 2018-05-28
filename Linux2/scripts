@@ -1,0 +1,81 @@
+#===================scripts_week1.txt==============================
+===================forif.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Sa Mai 19 22:55:03 CEST 2018
+#Purpose: searching all common users on the system
+
+path="/etc/passwd"
+
+for line in $(cat $path); do
+  usernr=$(echo $line | cut -d : -f3)
+  if [[ $usernr -ge 1000 ]] 2>/dev/null; then
+    echo $(echo $line | cut -d : -f5)
+  fi
+done
+
+
+
+
+===================Bestaat.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Sa Mai 19 22:14:17 CEST 2018
+command=$1
+
+if [[ -e $(which $command) ]] && [[ -r $(which $command) ]] && [[ -x $(which $command) ]]
+then
+  echo "$command is executable!"
+  echo "Path to command is: $(which $command)"
+  echo  $($command)
+else
+  echo "$command is not executable"
+fi
+
+
+
+
+===================Apacheconfig.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Sa Mai 19 22:30:11 CEST 2018
+keyword=$1
+adir="/etc/apache2"
+confs="$adir/apache2.conf $adir/ports.conf"
+
+if [[ -z $1 ]]; then
+  echo "No arguments specified!"
+  exit 1
+fi
+
+for file in $confs; do
+  #grep -H option suppresses the file output name if grep needs to search in more then one file
+  #grep -n  Prefix each line of output with the 1-based line number within its input file.
+  echo -e "\n$(grep -iH $keyword $file)\n"
+done
+
+
+
+
+===================geefpaswoord.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Sa Mai 19 23:21:20 CEST 2018
+#Purpose of createScript.sh: reading userinput
+
+paswoord="123"
+read -s -p "Paswoord: " mogelijkpaswoord
+
+if [[ $paswoord = $mogelijkpaswoord ]]; then
+  echo "Toegelaten"
+  exit 0
+else
+  echo "Verboden"
+  exit 1
+fi
+
+
+
+
+
+

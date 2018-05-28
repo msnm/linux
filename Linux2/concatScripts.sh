@@ -7,7 +7,7 @@
 filename=$1
 echo $filename
 IFS=$'\n'
-for file in $(find -iname "*.sh"); do
+for file in $(find -maxdepth 1 -iname "$2"); do
         echo $file
         echo "#===================$(basename $file)==============================" >> $filename
         less $file >> $filename

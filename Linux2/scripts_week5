@@ -1,0 +1,273 @@
+#===================cutregex.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: Mo Mai 28 20:25:45 CEST 2018
+#Version: 1.0
+#Purpose of cutregex:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+## Regex:[[:alpha:]] [[:digit:]] [[:space:]] [[:alnum:]] [[:print:]]
+#=========================================================
+
+cutme=false
+eerste=$1
+echo eerste arg $1
+shift
+regex="(-c)([[:digit:]])-([[:digit:]])"
+if [[ $eerste =~ $regex ]]; then
+  cutme=true
+  van=$((${BASH_REMATCH[2]} -1))
+  tot=$((${BASH_REMATCH[3]}-1))
+  lengte=$(($tot-$van))
+  echo $lengte
+fi
+
+OLDIFS=$IFS
+IFS=$'\n'
+for lijn in `cat "$@"`
+do
+  if $cutme
+    then
+    lijn=${lijn:$van:$lengte}
+  fi
+    echo $lijn
+done
+IFS=$OLDIFS
+#unset IFS
+
+
+#===================checkpassword.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Do Mai 24 21:08:49 CEST 2018
+#Purpose of checkpassword:
+
+regex="^[[:upper:]]{1}[[:print:]]{5}[[:digit:]]{2}$"
+
+read -p "Geef passwoord: " passwoord
+if [[ $passwoord =~ $regex ]]; then
+  echo "Het passwoord volgt het patroon"
+  exit 0
+else
+  echo "Het passwoord is niet correct!"
+  exit 1
+fi
+
+
+
+
+#===================kleur.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: Mo Mai 28 20:57:49 CEST 2018
+#Version: 1.0
+#Purpose of kleur:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+## Regex:[[:alpha:]] [[:digit:]] [[:space:]] [[:alnum:]] [[:print:]]
+#=========================================================
+reset='\e[0m'    # Vergeet NIET te resetten of alles blijft gekleurd!
+rood='\e[0;31m'
+blauw='\e[0;34m'
+
+echo -e "$rood rood $reset"
+echo -e "$blauw blauw $reset"
+IFS=$'\n'
+
+function tooninkleur() {
+  shopt -q -s extglob
+  # enkel 1 leading space  proces=${1/# /}
+  proces=${1##*([[:space:]])}
+  echo "Proces: $proces"
+  shopt -q -u extglob
+  echo -e "$rood ${proces/ /$reset $blauw} $reset"
+}
+
+
+for proces in `ps -eo pid,args`
+do
+  tooninkleur $proces
+done
+
+
+#===================nslookupregex.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: Mo Mai 28 21:51:33 CEST 2018
+#Version: 1.0
+#Purpose of nslookupregex:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+## Regex:[[:alpha:]] [[:digit:]] [[:space:]] [[:alnum:]] [[:print:]]
+## reset=\'\e[0m'  rood='\e[0;31m' blauw='\e[0;34m'
+##   shopt -q -s extglob content=${content##*([[:space:]])}   shopt -q -u extglob
+#=========================================================
+
+function fun_nslookup() {
+  name=$(nslookup $1 2>/dev/null)
+  regex=".*= (.*)Aut"
+  [[ $name =~ $regex ]]
+  echo ${BASH_REMATCH[1]}
+}
+inputfile="ips.txt"
+echo "109.74.196.225" > ips.txt
+echo "91.189.90.40" >> ips.txt
+echo "173.194.34.168" >> ips.txt
+
+for  line in $(cat $inputfile); do
+  fun_nslookup $line
+done
+exit 0
+
+
+#===================syslogregex.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: Mo Mai 28 19:09:26 CEST 2018
+#Version: 1.0
+#Purpose of syslogregex:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+#=========================================================
+
+IFS=$'\n'
+a=[[:alpha:]]
+d=[[:digit:]]
+rm -f tmp.txt
+regex="([[:alpha:]]{3} [ 0-9]{2})"
+
+#regex="$a{3} [ 0-9]$d $d{2}:$d{2}:$d{2} `hostname` (.*)\[$d+\]: (.*)"
+for line in $(cat /var/log/syslog); do
+  if [[ $line =~ $regex ]]; then
+      echo "Something: ${BASH_REMATCH[1]}" >> tmp.txt
+  fi
+
+done
+unset IFS
+
+
+#===================poortenregex.sh==============================
+#!/bin/bash
+#=========================================================
+#Author: Michael Schoenmaekers
+#Createdon: Mo Mai 28 21:27:10 CEST 2018
+#Version: 1.0
+#Purpose of poortenregex:
+#Toolset:
+## Check if command is installed: command -v ab >/dev/null 2>&1 || { echo "Error" >&2; exit 1 }
+## Default Value: ${var:-default}
+## Error Value: ${var?error_message}
+## Replace: ${string/vervang_deze_string/door_deze_string}
+### Replace all: ${string//vervang_deze_string/door_deze_string}
+## Replace begin or end: ${string/#vervang_deze_string/door_deze_string} or ${string/%vervang_deze_string/door_deze_string}
+## Substring: ${string:positie:lengte}
+## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}
+## Lower upper count:  ${string,,} ${string^^}  ${#string}
+## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...
+## Regex:[[:alpha:]] [[:digit:]] [[:space:]] [[:alnum:]] [[:print:]]
+## reset=\'\e[0m'  rood='\e[0;31m' blauw='\e[0;34m'
+##   shopt -q -s extglob content=${content##*([[:space:]])}   shopt -q -u extglob
+#=========================================================
+
+echo "TCP poorten:"
+IFS=$'\n'
+regex="tcp.*:+([1-9]+).*LISTEN"
+for line in $(netstat -tulpn 2>/dev/null); do
+if [[ $line =~ $regex ]]; then
+  echo ${BASH_REMATCH[1]}
+fi
+done
+unset IFS
+
+
+#===================backupregex.sh==============================
+#!/bin/bash
+#Author: msnm
+#Createdon: Do Mai 24 20:32:27 CEST 2018
+#Purpose of backupregex:
+#!/bin/bash
+#Author: msnm
+#Createdon: So Mai 20 15:12:42 CEST 2018
+#Purpose of bachp:
+
+homedir="~"
+error_dir="One argument - a dir - should be specified. $1 is not a known dir"
+error_root="You need to run this script as root"
+errorlog="error_$(basename $0).log"
+backuplog="b_$(basename $0).log"
+filename="Backup_$(date +%Y_%m_%d_%H_%M_%S).tar"
+
+function checkForHelp() {
+  echo "In regex"
+  echo $1
+  regex="-{1,2}h(elp){0,1}"
+  if [[ $1 =~ -{1,2}h(elp){0,1} ]]; then
+    echo "A Help message"
+    exit 1
+  fi
+  echo ${BASH_REMATCH[0]}
+}
+checkForHelp $@
+#Check if one argument is specified and is a dir
+if [[ -n $1 ]]; then
+  if [[ -d $1 ]]; then
+    homedir=$1
+  else
+    echo $error_dir >>${errorlog}
+  fi
+fi
+
+if [[ $(id -u) -ne 0 ]] ; then
+  echo $error_root >>${errorlog}
+  exit 1
+fi
+
+# -czvf makes a new tar for each file, therefore only the last file is in the tar!!!
+#find $dir -iname "*.sh" -mtime +48 -exec  tar -czvf $filename {} \; #backup all files modified less then two days ago
+
+#We need to append files to the tar file us the -r option!
+find $dir -iname "*.sh" -mtime -24 -exec  tar -rvf $filename {} \;  >>"${backuplog}" 2>>"${errorlog}"
+
+
+
+

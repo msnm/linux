@@ -20,7 +20,11 @@ if [[ -n $1 ]]; then
   echo '## Trim: {string#a*b} {string##a*b} {string%a*b} {string%%a*b}'>> "$1.sh"
   echo '## Lower upper count:  ${string,,} ${string^^}  ${#string}'>> "$1.sh"
   echo '## $@ in combi met SHIFT als een script schrijft met ./script optie1 file1 file2 ...'>> "$1.sh"
+  echo '## Regex:[[:alpha:]] [[:digit:]] [[:space:]] [[:alnum:]] [[:print:]]'  >> "$1.sh"
+  echo "## reset=\'\e[0m'  rood='\e[0;31m' blauw='\e[0;34m'" >> $1.sh
+  echo '##   shopt -q -s extglob content=${content##*([[:space:]])}   shopt -q -u extglob'  >> $1.sh
   echo "#=========================================================" >> "$1.sh"
+
   chmod +x "$1.sh"
   echo "Script is created"
 fi
